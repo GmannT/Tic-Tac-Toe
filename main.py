@@ -12,36 +12,68 @@ def player_turn():
   global a, b, c, d, e, f, g, h, i
   if pchoice == 1:
     a = "x"
-    list[0] -= 1
+    list.remove(1)
   if pchoice == 2:
     b = "x"
+    list.remove(2)
   if pchoice == 3:
     c = "x"
+    list.remove(3)
   if pchoice == 4:
     d = "x"
+    list.remove(4)
   if pchoice == 5:
     e = "x"
+    list.remove(5)
   if pchoice == 6:
     f = "x"
+    list.remove(6)
   if pchoice == 7:
     g = "x"
+    list.remove(7)
   if pchoice == 8:
     h = "x"
+    list.remove(8)
   if pchoice == 9:
     i = "x"
+    list.remove(9)
 
-def unpicked(y):
-  choice = random.randint(1-9) 
-  while choice == y:
-    choice
-
-
+def unpicked():
+  choice = random.choice(list)
+  return choice
 
 
-
-  
-def computer_choice():
-  
+def computer_turn():
+  global a,b,c,d,e,f,g,h,i
+  cChoice = unpicked()
+  if cChoice == 1:
+    a = "x"
+    list.remove(1)
+  if cChoice == 2:
+    b = "x"
+    list.remove(2)
+  if cChoice == 3:
+    c = "x"
+    list.remove(3)
+  if cChoice == 4:
+    d = "x"
+    list.remove(4)
+  if cChoice == 5:
+    e = "x"
+    list.remove(5)
+  if cChoice == 6:
+    f = "x"
+    list.remove(6)
+  if cChoice == 7:
+    g = "x"
+    list.remove(7)
+  if cChoice == 8:
+    h = "x"
+    list.remove(8)
+  if cChoice == 9:
+    i = "x"
+    list.remove(9)
+  print("The computer puts its marker on " + str(cChoice))
 
 
 
@@ -62,4 +94,6 @@ h = 8
 i = 9
 print_board()
 player_turn()
+print_board()
+computer_turn()
 print_board()
